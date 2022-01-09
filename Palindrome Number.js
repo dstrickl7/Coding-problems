@@ -61,11 +61,13 @@ function isPalindromeNumNoString(integer) {
     return false;
   } else {
     let integerArr = splitNum(integer);
-    let reversedArr = integerArr.slice().reverse();
-    let falseFound = 0;
+    let reversedArr = integerArr.slice().reverse(); //Copy and reverse integerArr
+    let falseFound = 0; //variable created to help compare array values
     integerArr.forEach((value, a) => {
+      //for each value of integerArr and iterator a
       if (value !== reversedArr[a]) {
-        falseFound++;
+        //compare value of integerArr and reversedArr at 'a' position
+        falseFound++; //if values aren't equal, add one to counter
         return;
       }
     });
